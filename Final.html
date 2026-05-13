@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Life Is Strange</title>
+</head>
+<body>
+  <audio id="bgm" loop preload="auto">
+    <source src="menu.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- FIRST SCREEN -->
+  <div class="menu">
+    <img class="image1" src="LifeIsStrange.png" alt="Arcadia Bay 1">
+    <button class="button-slant" onclick="showImage()"><span>Click Here</span></button>
+  </div>
+
+  <!-- POSTER OVERLAY -->
+  <div class="poster">
+    <!-- blue Sacrifice Chloe poster -->
+    <img class="poster-base" src="Sacrifice_Chloe_Plaque.png" alt="Arcadia Bay Poster">
+
+    <!-- FULLSCREEN JOURNAL + SUNSET LIGHTHOUSE OVERLAY -->
+   <!-- LIGHTHOUSE JOURNAL -->
+  <div class="journal-overlay journal-lighthouse">
+      <img class="journal-img" src="b525218eff40ac8a17dd529ae8ac9c44.jpg">
+
+      <img class="Polaroid-layout" src="polaroid_final_transparent.png">
+      <div class="tape tape-lh-1"></div>
+
+      <img class="Polaroid-layout2" src="polaroid_final_transparent.png">
+      <div class="tape tape-lh-2"></div>
+
+      <img class="Polaroid-layout3" src="polaroid_final_transparent.png">
+      <img class="Polaroid" src="PolaroidPS.png">
+      <div class="tape tape-lh-3"></div>
+
+
+      <img class="lighthouse-photo" src="life-is-strange-feature.jpg">
+      <img class="lighthouse-photo2" src="c3805ca2a3ebee046aa1e3e90d3d4322.jpg">
+      <img class="lighthouse-photo3" src="656832219_preview_uFz5esE.jpg">
+
+      <div class="sticky-note">
+          <h3>Lighthouse Info</h3>
+          <p>Perched on the cliffs above Arcadia Bay, the lighthouse has watched over the town for more than a century.
+          It’s a place where storms gather, secrets settle, and time itself seems to slow down. Generations have used this light as a guide — sailors, wanderers, and anyone who needed a moment of clarity.
+          For Max, the lighthouse becomes more than a landmark.
+          It becomes a symbol of choice, hope, and the fragile line between danger and safety.
+          Some sunsets paint the sky gold, others hide warnings in the clouds… but the lighthouse never stops shining.
+          A light against the darkness — the one place that always feels like it understands you.</p>
+      </div>
+
+      <button class="journalBack" onclick="closeLighthouse()">
+          <span>Back</span>
+      </button>
+  </div>
+
+  <!-- FOREST JOURNAL -->
+  <div class="journal-overlay journal-forest">
+      <img class="journal-img2" src="Screenshot 2025-12-11 at 1.06.12 AM.png">
+      <img class="Polaroid-layout4" src="polaroid_final_transparent.png">
+      <div class="tape tape-fo-1"></div>
+
+      <img class="Polaroid-layout5" 
+      src="polaroid_final_transparent.png">
+      <div class="tape tape-fo-2"></div>
+
+      <img class="Polaroid-layout6" 
+      src="polaroid_final_transparent.png">
+      <img class="forest-photo" src="lis-friends.jpg.webp">
+      <div class="tape tape-fo-3"></div>
+
+      <img class="forest-photo2" src="20220202183805-1-1657454116-1484256372.jpg">
+      <img class="forest-photo3" src="thumb-1920-1014923.jpg">
+
+      <div class="sticky-note2">
+          <h3>Forest Info</h3>
+          <p>Deep in the quiet woods of Arcadia Bay, the forest feels like a world untouched by time.
+          Sunlight filters through the trees like broken glass, and every step echoes a memory you didn’t know you had.
+          This is where lost things wander — whispers, secrets, and sometimes… a spirit guiding the way.
+          The forest is peaceful, but also mysterious.
+          It reminds you that nature listens, even when people don’t.
+          And if you're lucky, you might catch a glimpse of the doe —
+          a symbol of hope, purity, and the paths we’re meant to follow.</p>
+      </div>
+
+      <button class="journalBack2" onclick="closeForest()">
+          <span>Back</span>
+      </button>
+  </div>
+
+    <!-- pretty lighthouse on top of blue poster -->
+    <img class="prettyLight"
+         src="no-spoilers-the-lighthouse-art-by-me-v0-n7unjec0crud1.png.webp"
+         alt="The Lighthouse">
+
+    <!-- doe image on top of blue poster -->
+    <img class="doe"
+         src="tumblr_561714372e6e3a3465acff728fec80b6_a26b1cf7_1280.png"
+         alt="doe">
+
+    <!-- blackwell image on top of blue poster -->
+    <img class="blackwell"
+         src="Blackwell_Academy-02.webp"
+         alt="blackwell">
+
+    <!-- back button for poster -->
+    <button class="back" onclick="hideImage()"><span>Back</span></button>
+
+    <!-- clickable plaque -->
+    <a class="lightview" onclick="openJournal('lighthouse')">
+    <span>Visit our famous lighthouse</span>
+    </a>
+
+    <!-- clickable plaque 2 -->
+    <a class="doeview" onclick="openJournal('forest')">
+    <span>Visit our beautiful forest</span>
+    </a>
+
+    <!-- clickable plaque 3 -->
+    <a class="schoolview" onclick="openJournal('school')">
+    <span>Visit our iconic school</span>
+    </a>
+       <!-- clickable plaque 4 -->
+    <a class="mapview" onclick="openJournal('map')">
+    <span>More information</span>
+    </a>
+
+    <div class="journal-overlay journal-school">
+
+
+     
+
+  <!-- PAGE 1 -->
+  <div class="school-page school-page-1 active">
+    <img class="journal-img3" src="Screenshot 2025-12-11 at 6.33.19 AM.png" alt="Blackwell Academy Page 1">
+
+    <div class="school-label label-entrance"><span>Prescott Dormitory</span></div>
+    <div class="school-label label-hall"><span>Dormitory Hallway</span></div>
+    <div class="school-label label-campus"><span>Max's Room</span></div>
+
+    <!-- page 1 decorations -->
+    <img class="Polaroid-layout7" src="polaroid_final_transparent.png">
+    <div class="tape tape-l1"></div>
+
+    <img class="Polaroid-layout8" src="polaroid_final_transparent.png">
+    <div class="tape tape-l2"></div>
+
+    <img class="Polaroid-layout9" src="polaroid_final_transparent.png">
+    <div class="tape tape-l3"></div>
+
+    <img class="Polaroid-layout10" src="polaroid_final_transparent.png">
+    <div class="tape tape-r1"></div>
+
+    <img class="Polaroid-layout11" src="polaroid_final_transparent.png">
+    <div class="tape tape-r2"></div>
+
+    <img class="Polaroid-layout12" src="polaroid_final_transparent.png">
+    <div class="tape tape-r3"></div>
+
+    <img class="school-photo" src="Life3.webp">
+    <img class="school-photo2" src="DF19D78010B80FD9D99AE10780743ADDD3BEAE3C.jpeg">
+    <img class="school-photo3" src="z3s1or4bf5iz.jpg">
+    <img class="school-photo4" src="lifeisstrangepic3.jpg.webp">
+    <img class="school-photo5" src="Hallwayep1.webp">
+    <img class="school-photo6" src="MaxRoomFrontSide.webp">
+
+    <div class="school-label label-lockers"><span>Locker Hallway</span></div>
+    <div class="school-label label-dorm"><span>Max's Room</span></div>
+    <div class="school-label label-campus2"><span>Parking lot</span></div>
+  </div>
+
+  <!-- PAGE 2 (clean) -->
+  <div class="school-page school-page-2">
+    <img class="journal-img4" src="Screenshot 2025-12-11 at 6.33.19 AM.png" alt="Blackwell Academy Page 2">
+
+    <div class="school-label label-pool"><span>Swimming Pool</span></div>
+    <div class="school-label label-lockers2"><span>Main Campus</span></div>
+    <div class="school-label label-dorm2"><span>Max's Room</span></div>
+  
+    <img class="Polaroid-layout13" src="polaroid_final_transparent.png">
+    <div class="tape tape-13"></div>
+
+    <img class="Polaroid-layout14" src="polaroid_final_transparent.png">
+    <div class="tape tape-14"></div>
+
+    <img class="Polaroid-layout15" src="polaroid_final_transparent.png">
+    <div class="tape-page2-3"></div>
+    <div class="tape tape-15"></div>
+
+    <img class="school-photo7" src="Blackwell-campus.webp">
+    <img class="school-photo8" src="kSQdiPK.png">
+    <img class="school-photo9" src="all-maxs-room-is-one-of-my-favourite-place-in-the-game-so-i-v0-u8vmztew4f7a1.jpg">
+    
+
+    <div class="sticky-note3">
+      <h3>School Info</h3>
+      <p>Welcome to Blackwell Academy, the pride of Arcadia Bay’s arts and sciences. Known for its historic brick architecture and award-winning photography program, Blackwell blends modern creativity with classic campus charm. Students from all over the state come here to explore their passions — from film and design to environmental studies. Walk the hallways and you’ll feel the energy: inspiration on every bulletin board, stories in every classroom, and a community shaped by ambition and curiosity. Whether you're touring the dorms, visiting the gallery, or catching a glimpse of everyday student life, Blackwell promises a glimpse into the heart of Arcadia Bay’s future.</p>
+    </div>
+  </div>
+
+  <!-- buttons -->
+  <button class="journalBack3" onclick="closeSchool()"><span>Back</span></button>
+  <button class="next" onclick="schoolNext()"><span>Next</span></button>
+  <button class="prev" onclick="schoolPrev()"><span>← Prev</span></button>
+
+  </div>
+
+</div>  
+
+    <!-- MAPS  -->
+
+  <div class="journal-overlay journal-map">
+    <img class="map-base" src="LIFmaps.jpg" alt="Arcadia Bay Map"><div>
+
+      <img class="maps-img-1" src="American-Rust.webp">
+      <img class="Polaroid-layout16" src="polaroid_final_transparent.png">
+      <div class="tape tape-fo-4"></div>
+
+      <img class="maps-img-2" src="maxresdefault.jpg">
+      <img class="Polaroid-layout17" src="polaroid_final_transparent.png">
+      <div class="tape tape-fo-5"></div>
+
+      <img class="maps-img-3" src="Maxresdefaultmadsenhousre.webp">
+      <img class="Polaroid-layout18" src="polaroid_final_transparent.png">
+      <div class="tape tape-fo-6"></div>
+
+      <img class="maps-img-4" src="Barn.webp">
+      <img class="Polaroid-layout19" src="polaroid_final_transparent.png">
+
+      <div class="sticky-note4">
+          <h3>The Junkyard</h3>
+      </div>
+
+      <div class="sticky-note5">
+          <h3>Two Whales Diner</h3>
+      </div>
+
+      <div class="sticky-note6">
+          <h3>Price Home</h3>
+      </div>
+
+      <div class="sticky-note7">
+          <h3>The Barn</h3>
+      </div>
+
+      <button class="journalBack4" onclick="closeMaps()">
+          <span>Back</span>
+      </button>
+
+      <button class="sources-btn" onclick="showSources()"><span>Sources</span></button>
+    </div>
+  </div>
+
+    <!-- SOURCES JOURNAL -->
+    <div class="journal-overlay journal-sources">
+      <img class="journal-img5" src="NhGCFri.png" alt="Sources">
+      <button class="journalBack5" onclick="closeSources()"><span>Back</span></button>
+
+      <div class="sticky-note8">
+        <h3>Sources</h3>
+
+        <div class="tape tape-top1"></div>
+        <div class="tape tape-top2"></div>
+        <div class="tape tape-top3"></div>
+
+        <p><strong>Locations (Life is Strange Wiki)</strong></p>
+
+        <p><a href="https://life-is-strange.fandom.com/wiki/Locations_(Life_is_Strange)" target="_blank">Locations (Life is Strange)</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Blackwell_Academy" target="_blank">Blackwell Academy</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Lighthouse" target="_blank">Lighthouse</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Blackwell_Campus" target="_blank">Blackwell Campus</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Blackwell_Parking_Lot" target="_blank">Blackwell Parking Lot</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Blackwell_Swimming_Pool" target="_blank">Blackwell Swimming Pool</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Max%27s_Room" target="_blank">Max’s Room</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Prescott_Barn" target="_blank">Prescott Barn</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Two_Whales_Diner" target="_blank">Two Whales Diner</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Blackwell_Academy_Hallway" target="_blank">Blackwell Academy Hallway</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Prescott_Dormitory" target="_blank">Prescott Dormitory</a></p>
+
+        <p><strong>World / Nature</strong></p>
+
+        <p><a href="https://life-is-strange.fandom.com/wiki/Wildlife" target="_blank">Wildlife</a></p>
+        <p><a href="https://www.lifeisstrangefans.com/screenshots/doe-in-the-forest/" target="_blank">Doe in the Forest</a></p>
+        <p><a href="https://life-is-strange.fandom.com/wiki/Arcadia_Bay" target="_blank">Arcadia Bay</a></p>
+
+        <p><strong>Artwork / Images</strong></p>
+
+        <p><a href="https://www.reddit.com/r/lifeisstrange/comments/1g3ll5v/no_spoilers_the_lighthouse_art_by_me/" target="_blank">Lighthouse Artwork (Reddit)</a></p>
+        <p><a href="https://www.reddit.com/r/lifeisstrange/comments/1d58yxz/no_spoilers_does_anybody_have_a_1920x1080_version/" target="_blank">Lighthouse Image (Reddit)</a></p>
+        <p><a href="https://www.reddit.com/r/lifeisstrange/comments/a0hufz/no_spoilers_i_did_this_a_while_ago_if_you_ever/" target="_blank">Fan Artwork (Reddit)</a></p>
+        <p><a href="https://www.reddit.com/r/lifeisstrange/comments/6ybe9p/no_spoilersarcadia_bay_map_in_before_the_storm/" target="_blank">Arcadia Bay Map (Reddit)</a></p>
+        <p><a href="https://x.com/alina_ambitious/status/1782116126375190882" target="_blank">Two Whales Diner Post (X / Twitter)</a></p>
+        <p><a href="https://kr.pinterest.com/pin/735423814187966980/" target="_blank">Lighthouse Aesthetic</a></p>
+        <p><a href="https://in.pinterest.com/pin/1090997078992296351/" target="_blank">Arcadia Bay Life Is Strange</a></p>
+
+        <p><strong>Reviews / Game Info</strong></p>
+
+        <p><a href="https://opencritic.com/game/75/life-is-strange-episode-2-out-of-time" target="_blank">Life is Strange Episode 2 (OpenCritic)</a></p>
+        <p><a href="https://stratege.ru/ps4/games/life_is_strange/article/58794" target="_blank">Life is Strange Article (Stratege.ru)</a></p>
+
+        <p><strong>Audio / Music</strong></p>
+        <p><a href="https://www.reddit.com/r/lifeisstrange/comments/1ptiptt/no_spoilers_i_made_looping_versions_of_the_main/" target="_blank">Looping Main Theme (Reddit)</a></p>
+        <p><a href="https://www.youtube.com/watch?v=K0iax_t8hXo" target="_blank">Life Is Strange Menu Music (YouTube)</a></p>
+
+      </div>
+
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
