@@ -183,12 +183,12 @@ html, body {
 
 @font-face {
     font-family: "Lighthouse";
-    src: url("LighthouseScript.ttf") format("truetype");
+    src: url("Lighthouse-BF67c84ffa04857.otf") format("truetype");
 }
 
 @font-face {
     font-family: "DK";
-    src: url("DK Lemon Yellow Sun.otf") format("truetype");
+    src: url("DKLemonYellowSun.otf") format("truetype");
 }
 
 .poster {
